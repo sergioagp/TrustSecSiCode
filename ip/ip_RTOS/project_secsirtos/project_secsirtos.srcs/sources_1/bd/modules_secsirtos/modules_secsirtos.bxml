@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="35">
+  <CompositeFile CompositeFileTopName="modules_secsirtos" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1530202608"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1530202608"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1530202608"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1530202608"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="ip\modules_secsirtos_axi_interface_0_0\modules_secsirtos_axi_interface_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_interface_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\modules_secsirtos_scheduler_0_0\modules_secsirtos_scheduler_0_0.xci" Type="IP">
+        <Instance HierarchyPath="scheduler"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\modules_secsirtos_timers_ip_0_0\modules_secsirtos_timers_ip_0_0.xci" Type="IP">
+        <Instance HierarchyPath="timers_sw"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\modules_secsirtos_lists_manager_0_1\modules_secsirtos_lists_manager_0_1.xci" Type="IP">
+        <Instance HierarchyPath="lists_manager_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\modules_secsirtos_c_counter_binary_0_0\modules_secsirtos_c_counter_binary_0_0.xci" Type="IP">
+        <Instance HierarchyPath="c_counter_binary_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+    </FileCollection>
+  </CompositeFile>
+</Root>

@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x0" bd:device="xc7z020clg484-1" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.1" bd:top="modules_secsirtos" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>modules_secsirtos</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="modules_secsirtos_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>aclk</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>aresetn</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>modules_secsirtos_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>axi_interface_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="axi_interface" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">modules_secsirtos_axi_interface_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>scheduler</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="scheduler" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">modules_secsirtos_scheduler_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>timers_sw</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="timers_ip" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">modules_secsirtos_timers_ip_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>lists_manager_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="lists_manager" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">modules_secsirtos_lists_manager_0_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>c_counter_binary_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="c_counter_binary" spirit:vendor="xilinx.com" spirit:version="12.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">modules_secsirtos_c_counter_binary_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Output_Width">32</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>timers_sw_resumeTMRTask_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="timers_sw" spirit:portRef="resumeTMRTask_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="resume_tasktimer_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>timers_sw_timerTaskID_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="timers_sw" spirit:portRef="timerTaskID_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="idtasktimer_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>lists_manager_0_id_task_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="id_task_out"/>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="addrtask_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>lists_manager_0_tcb_read_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="tcb_read_out"/>
+        <spirit:internalPortReference spirit:componentRef="scheduler" spirit:portRef="tcbtask_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>lists_manager_0_ptr_nexttask_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="ptr_nexttask_out"/>
+        <spirit:internalPortReference spirit:componentRef="scheduler" spirit:portRef="ptr_nexttask_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>lists_manager_0_ptr_hpritask_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="ptr_hpritask_out"/>
+        <spirit:internalPortReference spirit:componentRef="scheduler" spirit:portRef="ptr_hpritask_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>lists_manager_0_highpriority_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="highpriority_out"/>
+        <spirit:internalPortReference spirit:componentRef="scheduler" spirit:portRef="highpriority_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>scheduler_addrread_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="scheduler" spirit:portRef="addrread_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="addr_read_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>scheduler_addrTCB_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="scheduler" spirit:portRef="addrTCB_out"/>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="addrtcb_run_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_interface_0_insnew_rdylist_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="insnew_rdylist_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="insnew_rdylist_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_interface_0_addrtcb_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="addrtcb_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="addrtcb_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_interface_0_inserttask_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="inserttask_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="ins_rdylist_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_interface_0_priority_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="priority_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="priority_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_interface_0_suspendtask_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="suspendtask_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="susp_rdylist_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_interface_0_delaytask_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="delaytask_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="ins_dlylist_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_interface_0_delayvalue_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="delayvalue_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="valdelay_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_interface_0_addrtask_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="addrtask_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="idtask_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>axi_interface_0_deletetask_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="deletetask_out"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="del_rdylist_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>c_counter_binary_0_Q</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="c_counter_binary_0" spirit:portRef="Q"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="tickval_in"/>
+        <spirit:internalPortReference spirit:componentRef="timers_sw" spirit:portRef="tick_in"/>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="tickvalue_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Net</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="scheduler" spirit:portRef="tick_in"/>
+        <spirit:internalPortReference spirit:componentRef="c_counter_binary_0" spirit:portRef="CLK"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>aclk_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="timers_sw" spirit:portRef="s00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="s00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="scheduler" spirit:portRef="aclk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>aresetn_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="lists_manager_0" spirit:portRef="aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="scheduler" spirit:portRef="aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_interface_0" spirit:portRef="s00_axi_aresetn"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>

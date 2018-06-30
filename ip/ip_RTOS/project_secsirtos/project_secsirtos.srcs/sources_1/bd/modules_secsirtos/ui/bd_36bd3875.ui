@@ -1,0 +1,38 @@
+{
+   ExpandedHierarchyInLayout: "",
+   commentid: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port aclk -pg 1 -y 370 -defaultsOSRD
+preplace port aresetn -pg 1 -y 390 -defaultsOSRD
+preplace inst axi_interface_0 -pg 1 -lvl 5 -y 750 -defaultsOSRD
+preplace inst timers_sw -pg 1 -lvl 2 -y 290 -defaultsOSRD
+preplace inst c_counter_binary_0 -pg 1 -lvl 1 -y 310 -defaultsOSRD
+preplace inst scheduler -pg 1 -lvl 4 -y 450 -defaultsOSRD
+preplace inst lists_manager_0 -pg 1 -lvl 3 -y 200 -defaultsOSRD
+preplace netloc axi_interface_0_priority_out 1 2 4 580 890 NJ 890 NJ 890 1700
+preplace netloc lists_manager_0_highpriority_out 1 3 1 1020
+preplace netloc axi_interface_0_suspendtask_out 1 2 4 550 920 NJ 920 NJ 920 1710
+preplace netloc axi_interface_0_insnew_rdylist_out 1 2 4 560 590 NJ 590 NJ 590 1700
+preplace netloc scheduler_addrTCB_out 1 4 1 1360
+preplace netloc lists_manager_0_ptr_hpritask_out 1 3 1 1000
+preplace netloc axi_interface_0_delayvalue_out 1 2 4 610 580 NJ 580 NJ 580 1740
+preplace netloc axi_interface_0_inserttask_out 1 2 4 540 910 NJ 910 NJ 910 1720
+preplace netloc axi_interface_0_deletetask_out 1 2 4 590 900 NJ 900 NJ 900 1690
+preplace netloc lists_manager_0_ptr_nexttask_out 1 3 1 970
+preplace netloc lists_manager_0_id_task_out 1 3 2 N 240 1370J
+preplace netloc c_counter_binary_0_Q 1 1 4 200 400 530 720 NJ 720 NJ
+preplace netloc aresetn_1 1 0 5 NJ 390 NJ 390 520 420 990 310 1350J
+preplace netloc axi_interface_0_addrtask_out 1 2 4 620 400 950J 300 NJ 300 1750
+preplace netloc axi_interface_0_delaytask_out 1 2 4 600 570 NJ 570 NJ 570 1730
+preplace netloc axi_interface_0_addrtcb_out 1 2 4 570 600 NJ 600 NJ 600 1690
+preplace netloc timers_sw_timerTaskID_out 1 2 1 N
+preplace netloc timers_sw_resumeTMRTask_out 1 2 1 N
+preplace netloc Net 1 0 4 20 440 NJ 440 NJ 440 1030J
+preplace netloc aclk_1 1 0 5 NJ 370 210 380 510 410 980 320 1340J
+preplace netloc scheduler_addrread_out 1 2 3 630 430 1010J 330 1330
+preplace netloc lists_manager_0_tcb_read_out 1 3 1 960
+levelinfo -pg 1 0 110 360 790 1180 1530 1770 -top 0 -bot 930
+",
+}
+
