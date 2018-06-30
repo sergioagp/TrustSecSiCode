@@ -10,7 +10,7 @@ Version of uploaded archive: 1.0
 
 University name: Universidade do Minho
 
-Supervisor name: Prof. Dr. Sandro Pinto
+Supervisor name: Dr. Sandro Pinto
 
 Supervisor e-mail: sandro.pinto@dei.uminho.pt
 
@@ -20,7 +20,7 @@ Email: a70669@alunos.uminho.pt
 
 Participant: José Martins
 
-Email: aXXXXX@alunos.uminho.pt
+Email: a60141@alunos.uminho.pt
 
 Board used: ZedBoard
 
@@ -28,11 +28,6 @@ Vivado Version: 2018.1
 
 Brief description of project:
 
-Description of archive (explain directory structure, documents and source files):
+Embedded systems were, for a long time, single-purpose and closed systems, charac-terized by hardware resource constraints and real-time requirements.  Nowadays, theirfunctionality is ever-growing,  coupled with an increasing complexity and heterogene-ity. Virtualization, which enables multiple operating systems (OSes) to run on top of thesame hardware platform, is gaining momentum in the embedded systems arena, drivenby the growing interest in consolidating and isolating multiple and heterogeneous envi-ronments.  Programable System-on-chip (SoC) are becoming leading players in the em-bedded  systems  space,  because  the  combination  of  a  plethora  of  hard  resources  withconfigurable logic enables the efficient implementation of systems that perfectly fit theheterogeneous nature of embedded applications.This work presents a hardware-software co-design framework for easing the economyof meeting the new generation of embedded systems requirements. Arm TrustZone tech-nology is exploited to implement the root of trust of a virtualization-based architecturethat allows the execution of a General Purpose Operating System (GPOS) side-by-sidewith a Real-Time Operating System (RTOS). RTOS services were offloaded to hardware,so that we can present simultaneous improvements on performance and determinism.Instead of focusing in a concrete application, we provide a complete framework, specif-ically tailored for Zynq-base devices,  that developers can use to accelerate a bunch ofdistinct applications across different embedded industries.
 
-Instructions to build and test project
-
-Step 1:
-...
-
-Link to YouTube Video(s): [GitHub]https://www.youtube.com/watch?v=dQw4w9WgXcQ
+Link to YouTube Video(s):
