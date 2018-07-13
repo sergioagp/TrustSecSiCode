@@ -32,4 +32,4 @@ Embedded systems were, for a long time, single-purpose and closed systems, chara
 
 This work presents a hardware-software co-design framework for easing the economyof meeting the new generation of embedded systems requirements. Arm TrustZone tech-nology is exploited to implement the root of trust of a virtualization-based architecturethat allows the execution of a General Purpose Operating System (GPOS) side-by-sidewith a Real-Time Operating System (RTOS). RTOS services were offloaded to hardware,so that we can present simultaneous improvements on performance and determinism.Instead of focusing in a concrete application, we provide a complete framework, specif-ically tailored for Zynq-base devices,  that developers can use to accelerate a bunch ofdistinct applications across different embedded industries.
 
-Link to YouTube Video(s): https://youtu.be/z5B329uuY18
+Link to YouTube Video(s): https://youtu.be/T6Ukp4tHMOI
